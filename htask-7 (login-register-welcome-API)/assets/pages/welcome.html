@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="welcome"></h1>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+
+        let urlAdress = new URLSearchParams(window.location.search);
+        let path = urlAdress.get("userId");
+        window.onload = async () => {
+            try {
+                if (path) {
+                    let { data } = await axios.get(`https://655f2b37879575426b44b8f7.mockapi.io/person/${path}`);
+                    document.getElementById("welcome").innerHTML = `Xosh gelmisiniz ${data.name} ${data.surname}`
+                }
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

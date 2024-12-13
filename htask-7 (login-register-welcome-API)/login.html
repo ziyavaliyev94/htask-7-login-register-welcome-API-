@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Giriş Səhifəsi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-side">
+            <h1>Facebook</h1>
+            <form id="login-form" class="login-form">
+                <input type="text" id="login-email" placeholder="Email ya da telefon nömrəsi" class="input-field"
+                    required>
+                <input type="password" id="password" placeholder="Şifrə" class="input-field" required>
+                <i id="visibleIcon" class="fa-regular fa-eye"></i>
+                <h4 id="error"></h4>
+                <button type="submit" class="login-btn">Giriş</button>
+            </form>
+            <div class="links">
+                <a href="#">Şifrəni unutmusunuz?</a>
+                <a href="./assets/pages/register.html">Hesab yarat</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./assets/js/login.js"></script>
+</body>
+
+</html>

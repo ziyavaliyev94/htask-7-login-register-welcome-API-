@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h2>Yeni Hesab Yarat</h2>
+        </div>
+
+        <form id="signup-form">
+            <div class="input-group">
+                <label for="ad">Ad:</label>
+                <input type="text" id="name" name="ad" required>
+            </div>
+
+            <div class="input-group">
+                <label for="soyad">Soyad:</label>
+                <input type="text" id="surname" name="soyad" required>
+            </div>
+
+            <div class="input-group">
+                <label for="email">E-poçt:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="input-group">
+                <label for="sifre">Şifrə:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="dob-cinsiyet">
+                <div class="input-group">
+                    <label for="gün">Doğum Günü:</label>
+                    <input type="number" id="gün" name="gün" min="1" max="31" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="ay">Doğum Ayi:</label>
+                    <input type="number" id="ay" name="ay" min="1" max="12" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="il">Doğum İli:</label>
+                    <input type="number" id="il" name="il" min="1900" max="2024" required>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label id="cinsiyet" for="cinsiyet">Cinsiyyət:</label>
+                <div class="gender-options">
+                    <label><input type="radio" name="cinsiyet" value="erkek"> Kişi</label>
+                    <label><input type="radio" name="cinsiyet" value="qadin"> Qadin</label>
+                    <label><input type="radio" name="cinsiyet" value="digar"> Digər</label>
+                </div>
+            </div>
+
+            <div class="submit-button">
+                <h5 style="color: red; font-size: 16px; margin-bottom: 10px;" id="error"></h5>
+                <button type="submit">Hesab yarat</button>
+            </div>
+        </form>
+
+        <div class="links">
+            <p>Zaten qeydiyyatiniz var? <a href="/login.html">Giriş</a></p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../js/register.js"></script>
+</body>
+
+
+</html>
